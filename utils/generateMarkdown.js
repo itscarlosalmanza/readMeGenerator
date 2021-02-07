@@ -1,32 +1,25 @@
 function renderLicenseBadge(license) {
   if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
-  return ''
+  return "";
 }
 
 function renderLicenseLink(license) {
   if (license !== "None") {
-    return (
-      `\n* [License](#license)\n`
-    )
+    return `\n* [License](#license)\n`;
   }
-  return ''
+  return "";
 }
 
 function renderLicenseSection(license) {
   if (license !== "None") {
-    return (
-      `## License
+    return `## License
 
-This project is licensed under the ${license} license.`
-    )
+This project is licensed under the ${license} license.`;
   }
-  return ''
+  return "";
 }
-
-
-
 
 // function to generate markdown for README
 function generateMarkdown(data) {
@@ -77,10 +70,13 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}/).
+  If you have any questions about the repo, open an issue or contact me directly at ${
+    data.email
+  }. You can find more of my work at [${data.github}](https://github.com/${
+    data.github
+  }/).
   
   `;
-  }
-  
-  module.exports = generateMarkdown;
-  
+}
+
+module.exports = generateMarkdown;
